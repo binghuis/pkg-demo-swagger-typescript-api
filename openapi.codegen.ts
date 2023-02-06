@@ -1,8 +1,8 @@
 import { generateApi } from 'swagger-typescript-api';
 import path from 'path';
 
-const URL = 'http://127.0.0.1:4523/export/openapi?projectId=2165099';
-// const INPUT = './src/openapi/spec.json';
+const URL = 'http://';
+const INPUT = './src/openapi/spec.json';
 const OUTPUT = './src/openapi/__service__';
 const TEMPLATES = './src/openapi/templates';
 
@@ -12,8 +12,8 @@ generateApi({
   templates: path.resolve(process.cwd(), TEMPLATES),
   generateUnionEnums: true,
   modular: true,
-  url: URL,
-  // input: path.resolve(process.cwd(), INPUT),
+  // url: URL,
+  input: path.resolve(process.cwd(), INPUT),
   httpClientType: 'axios',
   defaultResponseAsSuccess: true,
   unwrapResponseData: true,
