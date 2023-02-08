@@ -2,7 +2,7 @@ import pkg from "swagger-typescript-api";
 const { generateApi, generateTemplates } = pkg;
 import path from "path";
 
-const URL = "http://127.0.0.1:4523/export/openapi?projectId=2165099";
+const URL = "http:";
 const INPUT = "./src/openapi/spec.json";
 const OUTPUT = "./src/openapi/__service__";
 const TEMPLATES = "./src/openapi/templates";
@@ -60,10 +60,10 @@ generateApi({
   }
 });
 
-generateTemplates({
-  cleanOutput: true,
-  output: path.resolve(process.cwd(), SOURCEPLATES),
-  httpClientType: "axios",
-  modular: true,
-  silent: false,
-});
+// generateTemplates({
+//   cleanOutput: true,
+//   output: path.resolve(process.cwd(), SOURCEPLATES),
+//   httpClientType: "axios",
+//   modular: true,
+//   silent: false,
+// });
