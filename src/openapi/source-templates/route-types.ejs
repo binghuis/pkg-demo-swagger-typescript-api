@@ -4,7 +4,6 @@ const { _, pascalCase } = utils;
 const { routes, moduleName } = route;
 const dataContracts = config.modular ? _.map(modelTypes, "name") : [];
 
-
 %>
 <% if (dataContracts.length) { %>
 import { <%~ dataContracts.join(", ") %> } from "./<%~ config.fileNames.dataContracts %>"
